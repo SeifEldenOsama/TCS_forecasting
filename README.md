@@ -1,6 +1,6 @@
 # TCS Stock Price Forecasting
 
-https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXBjYjBlczYyYzUwbThoOGRqNzZldDJvY3J1OGk3eXFxczI3Nm0xcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT5LMWNOjGqJzUfyve/giphy.gif
+![Alt Text](https://media.giphy.com/media/xT5LMWNOjGqJzUfyve/giphy.gif)
 
 ## 1. Project Overview
 
