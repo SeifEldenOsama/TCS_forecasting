@@ -1,5 +1,7 @@
 # TCS Stock Price Forecasting
 
+https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXBjYjBlczYyYzUwbThoOGRqNzZldDJvY3J1OGk3eXFxczI3Nm0xcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT5LMWNOjGqJzUfyve/giphy.gif
+
 ## 1. Project Overview
 
 This repository contains a comprehensive data science project focused on predicting the future stock prices of **Tata Consultancy Services (TCS)**, a leading global IT services and consulting company. The primary goal is to leverage historical stock market data and advanced machine learning techniques to build and evaluate predictive models.
