@@ -1,90 +1,79 @@
-# TCS Stock Price Forecasting
+# 📈 TCS Stock Price Forecasting
 
-![Alt Text](https://media.giphy.com/media/xT5LMWNOjGqJzUfyve/giphy.gif)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://www.tensorflow.org/)
 
-## 1. Project Overview
+A comprehensive data science project focused on predicting the future stock prices of **Tata Consultancy Services (TCS)** using historical market data and advanced machine learning techniques.
 
-This repository contains a comprehensive data science project focused on predicting the future stock prices of **Tata Consultancy Services (TCS)**, a leading global IT services and consulting company. The primary goal is to leverage historical stock market data and advanced machine learning techniques to build and evaluate predictive models.
+## 🌟 Project Overview
 
-The project follows a standard data science workflow, including data acquisition, exploratory data analysis (EDA), rigorous preprocessing, and the implementation of both traditional and deep learning models. The final analysis provides a comparative study of model performance to identify the most effective approach for time series forecasting in this context.
+This repository leverages a standard data science workflow to build and evaluate predictive models for stock market forecasting. The project compares traditional machine learning models with deep learning architectures to identify the most effective approach for time series analysis.
 
-## 2. Methodology
+### Key Objectives:
+- **Data Acquisition**: Automated retrieval of historical stock data using `yfinance`.
+- **Exploratory Data Analysis (EDA)**: In-depth trend analysis, statistical summaries, and correlation studies.
+- **Predictive Modeling**: Implementation of Linear Regression, Random Forest, and Long Short-Term Memory (LSTM) networks.
+- **Performance Evaluation**: Comparative analysis using MAE, RMSE, and R² metrics.
 
-### 2.1. Data Acquisition
-Historical stock data for TCS (ticker: `TCS.NS`) was sourced from Yahoo Finance using the `yfinance` library. The dataset spans from January 1, 2010, to the present, providing a robust time series for training and testing the models.
+## 📂 Repository Structure
 
-### 2.2. Exploratory Data Analysis (EDA)
-The initial analysis involved:
-*   **Statistical Summary:** Generating descriptive statistics of the stock features (Open, High, Low, Close, Volume).
-*   **Data Quality Check:** Verifying for missing values and duplicates.
-*   **Correlation Analysis:** Visualizing the correlation between different features using a heatmap.
-*   **Trend Analysis:** Plotting the historical closing price and analyzing long-term trends using 100-day and 200-day moving averages.
-
-### 2.3. Data Preprocessing
-The data was prepared for modeling through the following steps:
-1.  **Feature Selection:** The 'Close' price was selected as the target variable for forecasting.
-2.  **Scaling:** All features were scaled using `MinMaxScaler` to normalize the data between 0 and 1, which is crucial for deep learning models like LSTM.
-3.  **Time-Step Creation:** For the LSTM model, the data was restructured into sequences (time steps) to capture temporal dependencies.
-
-### 2.4. Models Implemented
-Three distinct models were implemented and compared:
-
-| Model | Type | Library | Key Characteristics |
-| :--- | :--- | :--- | :--- |
-| **Linear Regression** | Traditional ML | Scikit-learn | Simple, fast, and provides a baseline for performance. |
-| **Random Forest Regressor** | Ensemble ML | Scikit-learn | Non-linear model, robust to outliers, and less prone to overfitting. |
-| **Long Short-Term Memory (LSTM)** | Deep Learning | TensorFlow/Keras | Recurrent Neural Network (RNN) variant, highly effective for sequential data like time series. |
-
-## 3. Results and Model Comparison
-
-The models were evaluated using standard regression metrics: Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R2 Score.
-
-The **Linear Regression** model showed a high R2 score on the training data, indicating a strong fit to the historical trend. However, the **LSTM** model demonstrated superior performance in capturing the complex, non-linear patterns of the stock price, resulting in a lower RMSE on the test set, which is a more reliable measure of forecasting accuracy.
-
-The project includes a detailed visualization comparing the actual stock price against the predictions from the Linear Regression and Random Forest models, as well as a separate plot for the LSTM predictions. A final bar chart provides a clear comparison of the MAE and RMSE across all three models.
-
-## 4. Repository Structure
-
-```
-TCS_forecasting/
-├── notebooks/
-│   └── TCS_forecasting.ipynb  # Main Jupyter Notebook with all code and analysis
-├── presentation/
-│   └── (Presentation files)     # Project presentation materials
-└── README.md                  # This file
+```text
+.
+├── notebooks/              # Core analysis and modeling
+│   └── TCS_forecasting.ipynb # Main Jupyter Notebook
+├── presentation/           # Project presentation materials
+│   └── TCS_presentation.pdf
+├── requirements.txt        # Project dependencies
+├── LICENSE                 # MIT License
+└── README.md               # Project documentation
 ```
 
-## 5. Installation and Usage
-
-To replicate this analysis, follow these steps:
+## 🚀 Getting Started
 
 ### Prerequisites
-Ensure you have Python 3.x installed.
+- Python 3.8 or higher
+- Jupyter Notebook or Google Colab
 
-### Setup
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/SeifEldenOsama/TCS_forecasting.git
-    cd TCS_forecasting
-    ```
-2.  Install the required libraries. The main dependencies include `pandas`, `numpy`, `scikit-learn`, `tensorflow`, and `yfinance`.
-    ```bash
-    pip install pandas numpy scikit-learn tensorflow yfinance matplotlib seaborn
-    ```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SeifEldenOsama/TCS_forecasting.git
+   cd TCS_forecasting
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Running the Analysis
-1.  Open the Jupyter Notebook:
-    ```bash
-    jupyter notebook notebooks/TCS_forecasting.ipynb
-    ```
-2.  Run all cells in the notebook sequentially to execute the data acquisition, preprocessing, model training, and evaluation steps.
+### Usage
+1. Launch Jupyter Notebook:
+   ```bash
+   jupyter notebook notebooks/TCS_forecasting.ipynb
+   ```
+2. Run the cells sequentially to reproduce the analysis and model training.
 
-## 6. Team
+## 📊 Model Comparison
 
-This project was developed by the following team members:
-*   SeifElden Osama Hosney
-*   Sama NigmEldin
-*   Habiba Ashraf
-*   Mohamed Badr
-*   Esraa Ahmed
-*   Mohamed AbdAlwanis
+| Model | Type | Library | Performance Note |
+| :--- | :--- | :--- | :--- |
+| **Linear Regression** | Traditional ML | Scikit-learn | Baseline performance for linear trends. |
+| **Random Forest** | Ensemble ML | Scikit-learn | Robust to outliers and non-linear patterns. |
+| **LSTM** | Deep Learning | TensorFlow | Superior at capturing complex temporal dependencies. |
+
+## 🤝 Team
+
+Developed by:
+- **SeifElden Osama Hosney**
+- **Sama NigmEldin**
+- **Habiba Ashraf**
+- **Mohamed Badr**
+- **Esraa Ahmed**
+- **Mohamed AbdAlwanis**
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+Developed with ❤️ for Financial Analytics
