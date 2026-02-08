@@ -7,4 +7,4 @@ yfinance
 scikit-learn
 tensorflow
 ipykernel
-notebook
+notebook 
